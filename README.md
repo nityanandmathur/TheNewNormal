@@ -25,6 +25,10 @@ Finally the deadly second wave of covid 19 has ended and things are getting back
 
 ## From Pandemic to Endemic
  
+Graph of covid seems to relieve as compared to what damage it has already offered to all of us. 
+In other regions, if aided by vaccines, aimed for a similar zero-COVID strategy, then could the world hope to rid itself of the virus?
+Many scientists and researchers believe that Covid-19 It’s a beautiful dream but most scientists think it’s improbable.
+ 
 <img align="centre" width="616" height="250" src="https://github.com/nityanandmathur/B16_Wonders/blob/main/FilesForReadme/ActiveCases.png">
 <img align="centre" width="616" height="250" src="https://github.com/nityanandmathur/B16_Wonders/blob/main/FilesForReadme/Recovered.png"> <br />
  
