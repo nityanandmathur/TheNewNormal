@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+
+<head>
+  <meta charset="UTF-8">
+  <title>Diabetes Predictor</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+<body style="padding: 2.5%">
+  <div class="row">
+    <div class="col">
+      <h1>Diabetes Predictor</h1>
+      <form action="{{ url_for('predict-dib')}}" method="post">
+        <input type="text" name="GlucoseLevel" placeholder="Glucose Level" required="required" />
+        <input type="text" name="Insulin" placeholder="Insulin" required="required" />
+        <input type="text" name="BMI" placeholder="BMI" required="required" />
+        <input type="text" name="PBindex" placeholder="pb index" required="required" />
+        <input type="text" name="Age" placeholder="Age" required="required" />
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+      </form>
+      <br>
+      {{ prediction_text }}
+    </div>
+    <div class="col">
+      <h1>Diabetes Predictor</h1>
+      <form action="{{ url_for('predict-heart')}}" method="post">
+        <input type="text" name="cp" placeholder="cp" required="required" />
+        <input type="text" name="trtbps" placeholder="trtbps" required="required" />
+        <input type="text" name="chol" placeholder="chol" required="required" />
+        <input type="text" name="fbs" placeholder="fbs" required="required" />
+        <input type="text" name="thalachh" placeholder="thalachh" required="required" />
+        <input type="text" name="exng" placeholder="exng" required="required" />
+        <input type="text" name="oldpeak" placeholder="oldpeak" required="required" />
+        <input type="text" name="caa" placeholder="caa" required="required" />
+        <input type="text" name="thall" placeholder="thall" required="required" />
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+      </form>
+      <br>
+      {{ prediction_text }}
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
