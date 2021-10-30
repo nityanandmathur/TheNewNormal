@@ -23,10 +23,20 @@ Email - harshit.singh@iiitg.ac.in.  Contact number: `9205021433` <br />
 
 Finally the deadly second wave of covid 19 has ended and things are getting back to normal. But we cannot deny the fact that there is no going back to the lifestyle of the Pre-Covid Era. The only thing we can do is to accept this 'New-normal' and find solutions to ease the issues we are facing in this Post-Covid Era. Develop a platform that solves the problem of accumulation of crowd and prevent outbreak of this deadly disease in an innovative manner.
 
-  
-## Problems We are facing 
-  
+## From Pandemic to Endemic
+ 
+<img align="centre" width="616" height="250" src="https://github.com/nityanandmathur/B16_Wonders/blob/main/FilesForReadme/ActiveCases.png">
+<img align="centre" width="616" height="250" src="https://github.com/nityanandmathur/B16_Wonders/blob/main/FilesForReadme/Recovered.png"> <br />
+ 
+ 
 
+ 
+ 
+  ## Problems We are facing 
+  <img align="centre" width="752.8" height="196" src="https://github.com/nityanandmathur/B16_Wonders/blob/main/FilesForReadme/News%201.png">  <img align="right" width="145" height="201" src="https://github.com/nityanandmathur/B16_Wonders/blob/main/FilesForReadme/clipart233452.png">
+
+
+ 
 ## List of solutions to the problem statement
 1) Overcrowding - As we have seen there's so many mutations happening over time. According to many scientists and researchers our body will take ample amount of time to totally get rid of all these, according to the mutations happening and as each and every persons have different genes we need to stay safe and shouldn't interact with many people. Overcrowding is a very big problem 
   
