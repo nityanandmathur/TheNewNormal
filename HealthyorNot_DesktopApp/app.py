@@ -19,7 +19,7 @@ def home():
     return render_template('index.html')
 
 
-@app.route('/predict-dib',methods=['POST'])
+@app.route('/predictDib',methods=['POST'])
 def predictDib():
     model = pickle.load(open('model.pkl', 'rb'))
 
@@ -37,13 +37,13 @@ def predictDib():
     # print(prediction)
     pred=''
     if prediction[0] == 1:
-        pred = "You have Diabetes, please consult a Doctor."
+        pred = "You could have Diabetic problem,so please please, follow covid norms, get vaccinated and consult a Doctor."
     elif prediction[0] == 0:
-        pred = "You don't have Diabetes."
+        pred = "You are probably in safe zone but, please follow covid norms as much as possible "
     
     return render_template('index.html', prediction_text='{}'.format(pred))
 
-@app.route('/predict-heart',methods=['POST'])
+@app.route('/predictHeart',methods=['POST'])
 def predictHeart():
     
     model2 = pickle.load(open('model2.pkl', 'rb'))
@@ -56,9 +56,15 @@ def predictHeart():
     arr = list(request.form.values())
     float_features = [float(x) for x in arr]
     final_features = [np.array(float_features)]
-    prediction = model2.predict(sc.transform(final_features))
+    prediction1 = model2.predict(sc.transform(final_features))
+    predh=''
+    if prediction1[0] == 1:
+        predh = "You could have Heart problems, so please please follow covid norms, get vaccinated and consult a Doctor."
+    elif prediction1[0] == 0:
+        predh = "You are probably in safe zone but, please follow covid norms as much as possible "
+    
+    return render_template('index.html', prediction_text='{}'.format(predh))
    
-    return render_template('index.html', prediction_text='{}'.format('pred'))
 
 
 if __name__ == "__main__":
