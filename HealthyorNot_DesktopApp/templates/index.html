@@ -17,42 +17,152 @@
 
 <body style="padding: 2.5%">
   <div class="row">
-    <div class="col">
-      <h1>Diabetes Predictor</h1>
-      <form action="{{ url_for('predict-dib')}}" method="post">
-        <input type="text" name="GlucoseLevel" placeholder="Glucose Level" required="required" />
-        <input type="text" name="Insulin" placeholder="Insulin" required="required" />
-        <input type="text" name="BMI" placeholder="BMI" required="required" />
-        <input type="text" name="PBindex" placeholder="pb index" required="required" />
-        <input type="text" name="Age" placeholder="Age" required="required" />
-        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
-      </form>
-      <br>
-      {{ prediction_text }}
-    </div>
-    <div class="col">
-      <h1>Diabetes Predictor</h1>
-      <form action="{{ url_for('predict-heart')}}" method="post">
-        <input type="text" name="cp" placeholder="cp" required="required" />
-        <input type="text" name="trtbps" placeholder="trtbps" required="required" />
-        <input type="text" name="chol" placeholder="chol" required="required" />
-        <input type="text" name="fbs" placeholder="fbs" required="required" />
-        <input type="text" name="thalachh" placeholder="thalachh" required="required" />
-        <input type="text" name="exng" placeholder="exng" required="required" />
-        <input type="text" name="oldpeak" placeholder="oldpeak" required="required" />
-        <input type="text" name="caa" placeholder="caa" required="required" />
-        <input type="text" name="thall" placeholder="thall" required="required" />
+    <h2 >Disease Tracker <a class = "white" href="https://www.covid19india.org/">
+    <span class="typer"  id="main" data-words="Welcome to our desktop App,Hope you are fine😊 , : check your current medical status👩‍⚕️, click 👉  HERE to check covid spreading in your area " data-delay="100" data-deleteDelay="2000"></span>
+  <span class="cursor" data-owner="main"></span></a>
+  </h2>
 
-        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
-      </form>
-      <br>
-      {{ prediction_text }}
-    </div>
-  </div>
+    <div class="col">
+        <br>
 
+        <p class="dp4">  <b>Preseting an exclusive Diagonostic tools for personal health care</b></p>
+        <ul class="dp3">
+          <li>Fill in the following from your specific medical test reports.</li>
+          <li>Click on Predict and check your pharmaceutical status.</li>
+          <li>Observe your report and take specific extra measures to be free from covid.</li>
+       </ul>
+
+       <h1 class="ml11">
+        <span class="text-wrapper">
+          <span class="letters" class = "dp0">Stay Safe</span>
+          <span class="letters">Stay HEALTHY</span>
+        </span>
+      </h1>
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+      <style>
+      .ml11 {
+        font-weight: 700;
+        font-size: 30px;
+      }
+      
+      .ml11 .text-wrapper {
+        position: relative;
+        display: inline-block;
+        padding-top: 0.1em;
+        padding-right: 0.05em;
+        padding-bottom: 0.15em;
+      }
+      
+      .ml11 .line {
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        height: 100%;
+        width: 3px;
+        background-color: #fff;
+        transform-origin: 0 50%;
+      }
+      
+      .ml11 .line1 { 
+        top: 0; 
+        left: 0;
+      }
+
+      .ml11 .letter {
+        display: inline-block;
+        line-height: 1em;
+        color: #80f3da;
+      }
+      </style>
+      <script>
+      var i = 0;
+       function sleep(ms) {
+          return new Promise(resolve => setTimeout(resolve, ms));
+      }
+      var textWrapper = document.getElementsByClassName('letters');
+      textWrapper[0].style.display="none";
+      textWrapper[1].style.display="none";
+       setInterval( function() {
+       
+      // Wrap every letter in a span
+      textWrapper[0].style.display="none";
+      textWrapper[1].style.display="none";
+      textWrapper[i].style.display="block";
+      textWrapper[i].innerHTML = textWrapper[i].textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
+      anime.timeline({loop: true})
+        .add({
+          targets: '.ml11 .line',
+          scaleY: [0,1],
+          opacity: [0.5,1],
+          easing: "easeOutExpo",
+          duration: 700
+        })
+        .add({
+          targets: '.ml11 .line',
+          translateX: [0, document.querySelector('.ml11 .letters').getBoundingClientRect().width + 10],
+          easing: "easeOutExpo",
+          duration: 700,
+          delay: 100
+        }).add({
+          targets: '.ml11 .letter',
+          opacity: [0,1],
+          easing: "easeOutExpo",
+          duration: 600,
+          offset: '-=775',
+          delay: (el, i) => 34 * (i+1)
+        }).add({
+          targets: '.ml11',
+          opacity: 0,
+          duration: 1000,
+          easing: "easeOutExpo",
+          delay: 1500
+        });
+        if(i==0){i=1;}
+        else{i=0;} 
+      },1800);
+      </script>
+      
+       
+        <h1 class="dp"><u>Diabetes Predictor</u></h1>
+        <form action="{{ url_for('predictDib')}}" method="post">
+          <input type="text" name="GlucoseLevel" placeholder="Glucose Level" required="required" />
+          <input type="text" name="Insulin" placeholder="Insulin" required="required" />
+          <input type="text" name="BMI" placeholder="BMI" required="required" />
+          <input type="text" name="PBindex" placeholder="pb index" required="required" />
+          <input type="text" name="Age" placeholder="Age" required="required" />
+          <button type="submit" class="btn btn-primary btn-block btn-large">Predict 1</button>
+        </form>
+        <br>
+      </div>
+      <div class="col">
+        <h1 class="dp"><u>Heart Disease Predictor</u></h1>
+        <form action="{{ url_for('predictHeart')}}" method="post">
+          <input type="text" name="cp" placeholder="cp" required="required" />
+          <input type="text" name="trtbps" placeholder="trtbps" required="required" />
+          <input type="text" name="chol" placeholder="chol" required="required" />
+          <input type="text" name="fbs" placeholder="fbs" required="required" />
+          <input type="text" name="thalachh" placeholder="thalachh" required="required" />
+          <input type="text" name="exng" placeholder="exng" required="required" />
+          <input type="text" name="oldpeak" placeholder="oldpeak" required="required" />
+          <input type="text" name="caa" placeholder="caa" required="required" />
+          <input type="text" name="thall" placeholder="thall" required="required" />
+  
+          <button type="submit" class="btn btn-primary btn-block btn-large">Predict 2</button>
+        </form>
+        
+      </div>
+      
+    </div>
+    <b>{{ prediction_text }}</b>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
+    <script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"></script>
+    
+    
+
 </body>
 
 </html>
