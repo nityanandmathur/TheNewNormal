@@ -42,9 +42,10 @@ Many scientists and researchers believe that Covid-19 It’s a beautiful dream b
 
  
 ## List of solutions to the problem statement
-1) Overcrowding - As we have seen there's so many mutations happening over time. According to many scientists and researchers our body will take ample amount of time to totally get rid of all these, according to the mutations happening and as each and every persons have different genes we need to stay safe and shouldn't interact with many people. Overcrowding is a very big problem 
-  
-2) Mask Detection - Some AI system feature can be installed which through camera will detect ff someone's wearing a mask or not 
-3) Individual Focus/health tips  - 
+1) Overcrowding - As we have seen there's so many mutations happening over time. According to many scientists and researchers our body will take ample amount of time to totally get rid of all these, according to the mutations happening and as each and every persons have different genes we need to stay safe and shouldn't interact with many people. Overcrowding is a serious predicament that should be handeled properly with time. For the very purpose we have created a Tensorflow based Machine Learning model capable of detecting overcrowding and informing the local authorities at the very same time.
 
+2) Individual Focus/health tips  - In the present era of covid, it is important to establish the proper mental and ohysical health. It is extremely important that everybody should be able to diagonse themselves without use of external aid. For the very purpose, we have created a Machine Learning model integrated with Flask to deploy as Web Application. This model would take some geneal parameters from individuals and returns their chances of getting Diabetes or Heart Attack.
 
+<div align="center">
+<h1>   Many thanks for this opportunity!  
+ </h1>    
