@@ -38,6 +38,9 @@ Many scientists and researchers believe that Covid-19 It’s a beautiful dream b
  
   ## Problems We are facing 
   <img align="centre" width="752.8" height="196" src="https://github.com/nityanandmathur/B16_Wonders/blob/main/FilesForReadme/News%201.png">  <img align="right" width="145" height="201" src="https://github.com/nityanandmathur/B16_Wonders/blob/main/FilesForReadme/clipart233452.png">
+ 
+ ![image](https://user-images.githubusercontent.com/77379835/139567512-eebe6068-51a8-4d33-89b9-3310416c3611.png)
+
 
 
  
