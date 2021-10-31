@@ -21,13 +21,13 @@ Step 4 : Click on the website link made through server [ex : * Running on http:/
 
 ************
 
-![Screenshots of the App](HealthyorNot_DesktopApp/screenshot1.JPG)
+![Screenshots of the App](screenshot1.JPG)
 
 Fill in the form to get a prediction of wheteher you have the diasease or not.
 
 ************
 
-![Screenshots of the App](HealthyorNot_DesktopApp/screenshot2.JPG)
+![Screenshots of the App](screenshot2.JPG)
 
 ************
 
